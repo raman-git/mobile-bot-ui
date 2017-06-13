@@ -1,0 +1,34 @@
+page-bot {
+     .message {
+        margin: 10px 5px;
+        text-align: right !important;
+        max-width: 75%;
+        color:#fff;
+        -webkit-transform: translate3d(30%, 0, 0) !important;
+        transform: translate3d(30%, 0, 0) !important;
+        -webkit-box-flex: 1 !important;
+        -webkit-flex: 1 1 auto !important;
+        -ms-flex: 1 1 auto !important;
+        flex: 1 1 auto !important;
+        span {
+             padding:10px;
+             border-radius: 10px !important;
+             background-color:#008844;
+             display:inline-block !important
+        }
+        &.response {
+            text-align: left !important;
+            -webkit-transform: translate3d(0, 0, 0) !important;
+            transform: translate3d(0, 0, 0) !important;
+            span {
+                background-color:#0088dd; 
+            }
+        
+        }
+        
+    }
+
+ 
+
+}
+
