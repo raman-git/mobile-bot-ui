@@ -22,6 +22,7 @@
   <ion-toolbar>
     <ion-item>
     <ion-input type="text" placeholder="Ask a Question" 
+      (keypress)="keyEventHandler($event.keyCode)"
       on-return="sendMessage(); closeKeyboard()" 
       [(ngModel)]="userInput"
       xon-focus="inputUp()" xon-blur="inputDown()" >

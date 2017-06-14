@@ -18,19 +18,29 @@ export class BotPage {
     this.messages.push(new ChatMessage('Welcome! How can I help you?', true));
   }
   sendMessage() {
+    let message:string = this.userInput;
+    if (!message || message.trim().length <=0) {
+      return;
+    }
     this.isLoading = true;
-    this.messages.push(new ChatMessage(this.userInput, false));
+    this.messages.push(new ChatMessage(message, false));
+    this.userInput = '';
     //send to server
-    this.botService.sendMessage(this.userInput)
+    this.botService.sendMessage(message)
     .then(data => {
       console.log(data);
       this.isLoading = false;
       this.messages.push(new ChatMessage(<string>data, true));
     });
-   
   }
   processMessage(message:string) {
     this.messages.push(new ChatMessage(message, true));
+  }
+
+  keyEventHandler(key:number) {
+    if (key == 13) {
+      this.sendMessage();
+    }
   }
 
 }

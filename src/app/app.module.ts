@@ -4,7 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { ResearchApp } from './app.component';
 import { BotPage } from '../pages/bot/bot';
-import { ListPage } from '../pages/list/list';
+import { AboutPage } from '../pages/about/about';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -17,7 +17,7 @@ import { BotServiceProvider } from '../providers/bot-service/bot-service';
   declarations: [
     ResearchApp,
     BotPage,
-    ListPage
+    AboutPage
   ],
   imports: [
     HttpModule,
@@ -28,7 +28,7 @@ import { BotServiceProvider } from '../providers/bot-service/bot-service';
   entryComponents: [
     ResearchApp,
     BotPage,
-    ListPage
+    AboutPage
   ],
   providers: [
     StatusBar,
