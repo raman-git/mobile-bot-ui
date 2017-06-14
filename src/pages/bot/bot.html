@@ -17,10 +17,15 @@
     </div>
     <ion-spinner icon="dots" *ngIf="isLoading"></ion-spinner>
   </div> 
+  <!--ion-scroll scrollX="true" style="width: 100%; "-->
+   <button *ngFor="let option of options" ion-button color="secondary" round outline>
+     {{option.text}}
+   </button>
+  <!--/ion-scroll -->
 </ion-content>
 <ion-footer>
   <ion-toolbar>
-    <ion-item>
+    <ion-item style="padding-left:4px;">
     <ion-input type="text" placeholder="Ask a Question" 
       (keypress)="keyEventHandler($event.keyCode)"
       on-return="sendMessage(); closeKeyboard()" 

@@ -23,3 +23,10 @@ export class BotServiceProvider {
     });
   }
 }
+export class ChatResponse {
+  type:string;
+  
+  constructor() {
+
+  }
+}

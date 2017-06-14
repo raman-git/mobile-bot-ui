@@ -12,6 +12,8 @@ export class BotPage {
   responseText: string;
   messages: ChatMessage[] = [];
   isLoading: boolean = false;
+  //hardcoding for testing
+  options:any = [];
 
   constructor(public navCtrl: NavController, botService: BotServiceProvider) {
     this.botService = botService;
@@ -31,6 +33,7 @@ export class BotPage {
       console.log(data);
       this.isLoading = false;
       this.messages.push(new ChatMessage(<string>data, true));
+      this.options = [{text:'Option 1'}, {text:'Option 2'}, {text:'Option 3'}, {text:'Option 4'}];
     });
   }
   processMessage(message:string) {
